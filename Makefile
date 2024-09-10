@@ -20,4 +20,4 @@ protogen:
 
 .PHONY: pack
 pack:
-	substreams pack ./substreams.yaml
+	cd tokens && substreams pack ./substreams.yaml
