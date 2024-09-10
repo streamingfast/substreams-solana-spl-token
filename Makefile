@@ -6,9 +6,13 @@ STOP_BLOCK ?= +10
 build:
 	LDFLAGS="-Wl,-no_compact_unwind" cargo build --target wasm32-unknown-unknown --release
 
-.PHONY: run
-run: build
+.PHONY: map_block
+map_block: build
 	substreams run -e $(ENDPOINT) tokens/substreams.yaml map_block -s $(START_BLOCK) -t $(STOP_BLOCK)
+
+.PHONY: db_out
+db_out: build
+	substreams run -e $(ENDPOINT) tokens/substreams.yaml db_out -s $(START_BLOCK) -t $(STOP_BLOCK)
 
 .PHONY: protogen
 protogen:
