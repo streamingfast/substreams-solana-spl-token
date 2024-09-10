@@ -1,0 +1,21 @@
+{
+  "name": "sink",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "tsx index.ts",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@connectrpc/connect-node": "^1.4.0",
+    "@substreams/core": "^0.16.0",
+    "@substreams/manifest": "^0.15.0"
+  }
+}
